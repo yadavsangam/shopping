@@ -6,7 +6,6 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeComponent } from './component/home/home.component';
 import { CartComponent } from './component/cart/cart.component';
-import { ProductComponent } from './component/product/product.component';
 import { HeaderComponent } from './component/header/header.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FetchproductsComponent } from './component/fetchproducts/fetchproducts.component';
@@ -16,7 +15,6 @@ import { FetchproductsComponent } from './component/fetchproducts/fetchproducts.
     AppComponent,
     HomeComponent,
     CartComponent,
-    ProductComponent,
     HeaderComponent,
     FetchproductsComponent
   ],

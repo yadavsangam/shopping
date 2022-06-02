@@ -10,7 +10,7 @@ export class ApiService {
   constructor(private http : HttpClient) { }
 
   getProduct(){
-    return this.http.get<any>("http://localhost:3300/products/")
+    return this.http.get<any>("http://localhost:3300/products/",{headers: {"Access-Control-Allow-Origin":"*"}})
     .pipe(map((res:any)=>{
       return res;
     }))

@@ -21,7 +21,7 @@ h6 {
 
 .center {
     position: absolute;
-    top: 50%;
+    top: 55%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
@@ -45,4 +45,8 @@ h6 {
     font-weight: 400;
     padding: 12px 72px;
     border-radius: 3px !important;
+}
+
+.btn-box{
+    background-color: #DC3545;
 }

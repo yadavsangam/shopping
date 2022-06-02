@@ -1,4 +1,4 @@
-<!-- <ng-container *ngIf="products.length !=0"> -->
+<ng-container *ngIf="false"> 
     <div class="container">
         <div class="card-table">
             <div class="cart-product">
@@ -17,15 +17,15 @@
                     </thead>
                     <tbody>
                         <!-- <tr *ngFor="let item of products; let i = index"> -->
-                            <td>i+1</td>
+                            <td>1</td>
                             <td>title</td>
                             <td><img style="width: 120px;" src="..." alt=""></td>
                             <td style="width: 25%;">Description</td>
-                            <th style="width: 12%;">Price/th>
+                            <th style="width: 12%;">Price</th>
                             <td style="width: 12%;">Quantity</td>
                             <td style="width: 12%;">Total</td>
                             <td>
-                                <button  class="btn btn-danger"><i class="fas fa-trash-alt"></i></button>
+                                <button  class="btn btn-box btn-danger"><i class="fas fa-trash-alt"></i></button>
                             </td>
                         <!-- </tr> -->
                         <tr>
@@ -40,10 +40,10 @@
             </div>
         </div>
     </div>
-<!-- </ng-container> -->
+</ng-container>
 
 
-<!-- <ng-container *ngIf="products.length ==0"> -->
+<ng-container *ngIf="true">
     <div class="container">
         <div class="card">
             <h5 class="card-title">My Cart</h5>
@@ -55,4 +55,4 @@
             <button routerLink="/products" class="btn btn-primary">Shop Now</button>
         </div>
     </div>
-<!-- </ng-container> -->
+</ng-container>
