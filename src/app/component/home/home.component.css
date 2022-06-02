@@ -1,0 +1,19 @@
+.home-layout{
+    margin-top: 20px;
+    width: 100%;
+    height: 20%;
+    position: relative;
+}
+
+.carousel-item  img{
+    width: 100%;
+    height: 450px;
+    background-position: center;
+    background-size: contain;
+}
+
+.carouselExampleCaptions{
+    width: 100%;
+    height: 10%;
+}
+

@@ -1,13 +1,39 @@
+.form-group{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
 .form-control {
-    border-radius: 3px;
-    width: 600px;
-    margin-left: 20px;
+    border-radius: 30px;
+    width: 500px;
+    margin-left: 60px;
+    height: 32px;
 }
 
 .search-icon {
     position: absolute;
     z-index: 10;
-    right: 59%;
-    top: 20px;
-    color: blue;
+    right: 4%;
+    top: 13px;
+    color: #212529;
+    cursor: pointer;
+}
+
+.navbar{
+    padding: 0 30px 0 30px;
+    background-color: rgb(19, 18, 18);
+    
+}
+
+.logo{
+    font-family: 'PlayFair Display';
+    font-size: 17px;
+    color: #CDA64E;
+}
+
+.cart-btn{
+    color: rgb(238, 233, 233);
 }

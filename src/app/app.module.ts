@@ -8,6 +8,8 @@ import { HomeComponent } from './component/home/home.component';
 import { CartComponent } from './component/cart/cart.component';
 import { ProductComponent } from './component/product/product.component';
 import { HeaderComponent } from './component/header/header.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FetchproductsComponent } from './component/fetchproducts/fetchproducts.component';
 
 @NgModule({
   declarations: [
@@ -15,12 +17,14 @@ import { HeaderComponent } from './component/header/header.component';
     HomeComponent,
     CartComponent,
     ProductComponent,
-    HeaderComponent
+    HeaderComponent,
+    FetchproductsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
