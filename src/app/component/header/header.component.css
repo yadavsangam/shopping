@@ -3,12 +3,21 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
+}
+
+.navbar-brand{
+    width: 80%;
+    display: flex;
+    align-items: center;
+ 
 }
 
 
 .form-control {
     border-radius: 30px;
-    width: 500px;
+    /* width: 500px; */
+    width: 100%;
     margin-left: 60px;
     height: 32px;
 }
@@ -17,7 +26,7 @@
     position: absolute;
     z-index: 10;
     right: 4%;
-    top: 13px;
+    top: 20%;
     color: #212529;
     cursor: pointer;
 }
@@ -25,12 +34,12 @@
 .navbar{
     padding: 0 30px 0 30px;
     background-color: rgb(19, 18, 18);
-    
 }
+
 
 .logo{
     font-family: 'PlayFair Display';
-    font-size: 17px;
+    font-size: 30px;
     color: #CDA64E;
     cursor: pointer;
 }
@@ -61,8 +70,69 @@
     text-align: center;
 }
 
+
 .item a:hover {
     color: #CDA64E;
     cursor: pointer;
 }
 
+.quote{
+    width: 60vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.item-layout h5{
+   
+    font-family: 'PlayFair Display';
+    font-size: 25px;
+    margin-left: 70px;
+
+}
+
+
+
+@media  (max-width: 560px){
+   
+    
+    .logo{
+        font-size: 22px;
+    }
+    .form-control{
+        margin-left: 20px;
+    }
+    .cart-btn{
+        width: 10px;
+        display: flex;
+        align-items:flex-end;
+    }
+    .cart-btn i{
+        width: 20px;
+    }
+    .item img{
+        width: 25px;
+    }
+    .item {
+        margin: 0px 0px;
+        text-align: center;
+    }
+
+    .item-layout{
+        justify-content: space-between;
+    }
+    input::placeholder{
+        color: transparent;
+    }
+    .form-control{
+        height: 25px;
+    }
+    .search-icon{
+        font-size:large;
+        top: 16%;
+    }
+    .item-layout h5{
+        display: none;
+    }
+}
