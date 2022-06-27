@@ -40,7 +40,7 @@ export class HeaderComponent implements OnInit {
         }
         Object.assign(a,{quantity:1,total:a.price});
       });
-      console.log(this.productList)
+      // console.log(this.productList)
     });
 
     this.cartService.search.subscribe((val:any)=>{

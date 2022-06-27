@@ -23,7 +23,8 @@ export class CartService {
     this.cartItemList.push(product);
     this.productList.next(this.cartItemList);
     this.getTotalPrice();
-    console.log(this.cartItemList)
+    console.log(this.cartItemList);
+    // console.log(this.productList);
   }
   getTotalPrice() : number{
     let grandTotal = 0;
