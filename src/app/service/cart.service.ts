@@ -1,13 +1,14 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
+import { IProduct } from '../iproduct';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CartService {
 
-  public cartItemList : any =[]
-  public productList = new BehaviorSubject<any>([]);
+  public cartItemList : IProduct[] =[]
+  public productList = new BehaviorSubject<IProduct[]>([]);
   public search = new BehaviorSubject<string>("");
 
   constructor() { }
@@ -15,31 +16,50 @@ export class CartService {
     return this.productList.asObservable();
   }
 
-  setProduct(product : any){
+  setProduct(product: IProduct[] ){
     this.cartItemList.push(...product);
     this.productList.next(product);
   }
-  addtoCart(product : any){
+  addtoCart(product : IProduct){
+    // this.cartItemList.push(product);
+    // this.productList.next(this.cartItemList);
+    // this.getTotalPrice();
+    // console.log(this.cartItemList);
+    const itemIndex = this.cartItemList.findIndex(item => item.productId === product.productId);
+    if (itemIndex === -1) {
     this.cartItemList.push(product);
-    this.productList.next(this.cartItemList);
+    // this.toastr.success( `${product.title} Successfully added to cart` , `Awesome!`);
+    }
+    else {
+      // this.toastr.warning( 'Check your cart' , `${product.title} already added!`,{
+
+        // timeOut:2500
+
+      // });
+      // this.cartItemList[itemIndex].quantity = this.cartItemList[itemIndex].quantity + product.quantity;
+    }
+    this.productList.next(this.cartItemList.slice(0));
     this.getTotalPrice();
-    console.log(this.cartItemList);
-    // console.log(this.productList);
   }
+
+
   getTotalPrice() : number{
     let grandTotal = 0;
-    this.cartItemList.map((a:any)=>{
+    this.cartItemList.map((a:IProduct)=>{
       grandTotal += a.total;
     })
     return grandTotal;
   }
-  removeCartItem(product: any){
-    this.cartItemList.map((a:any, index:any)=>{
-      if(product.id=== a.id){
+
+  
+  removeCartItem(product: IProduct){
+    this.cartItemList.map((a:IProduct, index:any)=>{
+      if(product.productId=== a.productId){
         this.cartItemList.splice(index,1);
       }
     })
-    this.productList.next(this.cartItemList);
+     this.productList.next(this.cartItemList);
+
   }
   removeAllCart(){
     this.cartItemList = []
