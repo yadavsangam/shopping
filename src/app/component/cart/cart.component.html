@@ -22,7 +22,17 @@
                             <td><img style="width: 120px;" src="{{item.productImage}}" alt=""></td>
                             <td style="width: 25%;">{{item.productDescription}}</td>
                             <th style="width: 12%;">{{item.productPrice}}</th>
+
+                            <span  (click)="decreaseQuantity(item,item.quantity)">
+                                <i class="bi bi-patch-minus-fill"></i>  
+                            </span> 
+
                             <td style="width: 12%;">{{item.quantity}}</td>
+
+                            <span (click)="increaseQuantity(item,item.quantity)">
+                                <i class="bi bi-patch-plus-fill"></i>
+                            </span>
+
                             <td style="width: 12%;">{{item.total}}</td>
                             <td>
                                 <button (click)="removeItem(item)" class="btn btn-box btn-danger"><i class="fas fa-trash-alt"></i></button>
@@ -54,3 +64,15 @@
         </div>
     </div>
 </ng-container>
+
+
+
+ 
+<!-- 
+<span>{{fd.foodQuantity}}</span>                      
+
+<span (click)="increaseQuantity(fd,fd.foodQuantity)">
+
+    <i class="bi bi-patch-plus-fill"></i>    
+
+</span> -->

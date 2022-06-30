@@ -1,4 +1,5 @@
 export interface IProduct {
+    target: HTMLInputElement;
     forEach: any;
     filter(arg0: (a: any) => any): IProduct;
     price: any;

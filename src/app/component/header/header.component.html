@@ -3,7 +3,8 @@
         <div class="navbar-brand ">
             <strong routerLink="home" class="logo" >SHOPSY</strong>
             <div class="form-group">
-                <input type="text" class="form-control" [(ngModel)]="searchTerm" (keyup)="search($event)" placeholder="search products">
+                <!-- changes in 7 -->
+                <input type="text" class="form-control"   placeholder="search products">
                 <span class="fas fa-search search-icon"></span>
             </div>
             
@@ -27,11 +28,11 @@
             </a>
         </div>
         <!-- <div class="item">
-            <a (click)="filter('electronics')">
+            <a >
                 <img src="https://rukminim1.flixcart.com/flap/128/128/image/69c6589653afdb9a.png?q=100" alt="">
                 <h6>Electronics</h6>
             </a>
-        </div>
+        </div> 
         <div class="item">
             <a (click)="filter('electronics')">
                 <img src="https://rukminim1.flixcart.com/flap/128/128/image/82b3ca5fb2301045.png?q=100" alt="">
