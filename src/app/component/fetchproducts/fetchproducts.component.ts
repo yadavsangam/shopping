@@ -12,11 +12,7 @@ import { CartService } from 'src/app/service/cart.service';
 })
 export class FetchproductsComponent implements OnInit {
 
-  // product_title: FormControl = new FormControl("");
-  // product_price: FormControl = new FormControl("");
-  // product_category: FormControl = new FormControl("");
-  // product_description: FormControl = new FormControl("");
-  // product_image: FormControl = new FormControl("");
+  
 
   public productList!: IProduct;
   public filterCategory: any;
@@ -41,25 +37,7 @@ export class FetchproductsComponent implements OnInit {
     })
   }
 
-  // save(){
-  //   let product:IProduct = {
-  //     productTitle: this.product_title.value,
-  //     productPrice: this.product_price.value,
-  //     productCategory: this.product_category.value,
-  //     productDescription: this.product_description.value,
-  //     productImage: this.product_image.value,
-  //     forEach: undefined,
-  //     filter: function (arg0: (a: any) => any): IProduct {
-  //       throw new Error('Function not implemented.');
-  //     },
-  //     price: undefined,
-  //     category: '',
-  //     total: 0
-  //   };
-  //   this.productService.addProduct(product);
-  //   alert("Data Saved");
-  // }
-
+ 
   addtocart(item: IProduct){
     this.cartService.addtoCart(item);
   }
@@ -67,11 +45,14 @@ export class FetchproductsComponent implements OnInit {
   filter(category:string){
     this.filterCategory = this.productList
     .filter((a:any)=>{
-      if(a.category == category || category==''){
+      if(a.productCategory == category || category==''){
+        console.log(a)
         return a;
       }
     })
   }
+
+
 }
 
 

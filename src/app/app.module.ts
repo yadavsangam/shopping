@@ -19,7 +19,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     CartComponent,
     HeaderComponent,
     FetchproductsComponent,
-    FilterPipe
+    FilterPipe,
   ],
   imports: [
     BrowserModule,

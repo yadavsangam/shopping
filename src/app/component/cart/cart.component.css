@@ -3,8 +3,11 @@
 
 .card {
     height: 60vh;
-    margin: 25px;
+    /* margin: 25px; */
     padding: 25px;
+    position: absolute;
+    width: 87%;
+    top: 12%;
 }
 
 .center img {
@@ -31,7 +34,8 @@ h6 {
 }
 
 .card-table {
-    position: relative;
+    top: 12%;
+    position: absolute;
     display: flex;
     flex-direction: column;
     min-width: none;

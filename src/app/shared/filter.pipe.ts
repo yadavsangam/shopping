@@ -13,14 +13,12 @@ export class FilterPipe implements PipeTransform {
         return [];
       }
       // ====
-      console.log(propName);
       return value;
     }
     
     value.forEach((a:any)=>{
       console.log(a)
       if(a[propName].trim().toLowerCase().includes(filterString.toLowerCase())){
-        console.log(a);
         result.push(a);
       }
     });
