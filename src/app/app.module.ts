@@ -11,6 +11,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FetchproductsComponent } from './component/fetchproducts/fetchproducts.component';
 import { FilterPipe } from './shared/filter.pipe';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CheckoutComponent } from './component/checkout/checkout.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     HeaderComponent,
     FetchproductsComponent,
     FilterPipe,
+    CheckoutComponent,
   ],
   imports: [
     BrowserModule,
