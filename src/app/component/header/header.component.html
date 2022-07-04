@@ -4,7 +4,8 @@
             <strong routerLink="home" class="logo" >SHOPSY</strong>
             <div class="form-group">
                 <!-- changes in 7 -->
-                <input type="text" class="form-control"   placeholder="search products">
+                <input type="text" class="form-control" [(ngModel)]="searchTerm" (keyup)="search($event)"  
+                placeholder="search products">
                 <span class="fas fa-search search-icon"></span>
             </div>
             

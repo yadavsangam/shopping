@@ -11,7 +11,7 @@ export class ApiService {
   constructor(private http : HttpClient) { }
 
   getProduct(){
-    return this.http.get<IProduct>("https://localhost:5001/api/products",{headers: {"Access-Control-Allow-Origin":"*"}})
+    return this.http.get<IProduct>("https://localhost:44313/api/products",{headers: {"Access-Control-Allow-Origin":"*"}})
     .pipe(map((res:IProduct)=>{
       return res;
     }))

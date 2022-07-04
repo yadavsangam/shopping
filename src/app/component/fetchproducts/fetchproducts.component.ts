@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { IProduct } from 'src/app/iproduct';
 import { ApiService } from 'src/app/service/api.service';
 import { CartService } from 'src/app/service/cart.service';
-import { CheckoutComponent } from '../checkout/checkout.component';
+
 
 @Component({
   selector: 'app-fetchproducts',
