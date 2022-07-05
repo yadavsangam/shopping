@@ -3,7 +3,6 @@
         <div class="navbar-brand ">
             <strong routerLink="home" class="logo" >SHOPSY</strong>
             <div class="form-group">
-                <!-- changes in 7 -->
                 <input type="text" class="form-control" [(ngModel)]="searchTerm" (keyup)="search($event)"  
                 placeholder="search products">
                 <span class="fas fa-search search-icon"></span>
@@ -15,6 +14,12 @@
         <button routerLink="fetchproducts" class="btn cart-btn">
             All Products
         </button>
+
+        <button routerLink="dashboard" class="btn cart-btn">
+            Dashboard
+        </button>
+
+        <button routerLink="add-product" class="btn cart-btn">Add Products</button>
         
         <button routerLink="cart" class="btn cart-btn">
             <i style="font-size: 30px;" class="fas fa-cart-plus"></i>

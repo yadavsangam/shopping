@@ -12,6 +12,8 @@ import { FetchproductsComponent } from './component/fetchproducts/fetchproducts.
 import { FilterPipe } from './shared/filter.pipe';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CheckoutComponent } from './component/checkout/checkout.component';
+import { AddProductComponent } from './component/add-product/add-product.component';
+import { DashboardComponent } from './component/dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +24,8 @@ import { CheckoutComponent } from './component/checkout/checkout.component';
     FetchproductsComponent,
     FilterPipe,
     CheckoutComponent,
+    AddProductComponent,
+    DashboardComponent,
   ],
   imports: [
     BrowserModule,

@@ -13,7 +13,7 @@
 }
 
 .navbar-brand{
-    width: 80%;
+    width: 50%;
     display: flex;
     align-items: center;
  
@@ -23,15 +23,15 @@
 .form-control {
     border-radius: 30px;
     /* width: 500px; */
-    width: 100%;
-    margin-left: 60px;
+    width: 80%;
+    /* margin-left: 60px; */
     height: 32px;
 }
 
 .search-icon {
     position: absolute;
     z-index: 10;
-    right: 4%;
+    right: 15%;
     top: 20%;
     color: #212529;
     cursor: pointer;

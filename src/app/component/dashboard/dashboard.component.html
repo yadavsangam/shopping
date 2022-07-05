@@ -1,0 +1,17 @@
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod quia quasi ipsa aspernatur similique, nihil nostrum sed eum repellendus autem harum alias, recusandae.</p>
+
+
+
+<div class="products-layout">
+    <div class="row">
+        <ng-container *ngFor="let item of filterCategory | filter:searchKey:'productTitle'">
+            <div class="card col-md-3">
+                <img src="{{item.productImage}}" alt="">
+                <h5 style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">{{item.productTitle}}</h5>
+                <p style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">{{item.productDescription}}</p>
+                <p><strong>Price:</strong> ${{item.productPrice}}</p>
+                <button class="btn btn-primary"  (click)="deleteProduct(item)">Delete</button>
+            </div>
+        </ng-container>
+    </div>
+</div>
