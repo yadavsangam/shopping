@@ -1,30 +1,25 @@
-<p>add-product works!</p>
-<h2>Add new Product</h2>
-<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam ipsum pariatur fugit id similique aspernatur saepe est voluptatem consequuntur sed, optio qui atque tempora, rem quos earum ab corporis fuga aperiam aliquid molestias adipisci excepturi tenetur? Saepe perspiciatis maxime praesentium asperiores, illo eum commodi quibusdam magnam doloremque velit consectetur totam.</p>
-
-<form>
-    <p>
-        Product Title <input type="text" [formControl] = "product_title" />
-    </p>
-
-    <p>
-        Product Price <input type="text" [formControl] = "product_price" />
-    </p>
-
-    <p>
-        Product Category <input type="text" [formControl] = "product_category" />
-    </p>
-
-    <p>
-        Product Description <input type="text" [formControl] = "product_description" />
-    </p>
-
-    <p>
-        Product Image <input type="text" [formControl] = "product_image" />
-    </p>
-
-    <p>
-        <button type="button" (click) = "save()">Add Product</button>
-    </p>
-    
-</form>
+<div class="row">
+    <div class="col-75">
+      <div class="container">
+        <form>
+        
+          <div class="row">
+            <div class="col-50">
+              <h3>Add Product</h3>
+              <label>Product Title</label>
+              <input type="text" [formControl] = "product_title" />
+              <label>Product Price </label>
+              <input type="text" [formControl] = "product_price" />
+              <label>Product Category </label>
+              <input type="text" [formControl] = "product_category" />
+              <label>Product Description </label>
+              <input type="text" [formControl] = "product_description" />
+              <label>Product Image </label>
+              <input type="text" [formControl] = "product_image" />
+              <button type="button" (click) = "save()">Add Product</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+</div>

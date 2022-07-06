@@ -14,6 +14,7 @@ export class CartComponent implements OnInit {
 
   constructor(private cartService : CartService) { }
 
+ // it runs when the component is called
   ngOnInit(): void {
     this.cartService.getProducts()
     .subscribe(res=>{
@@ -27,14 +28,17 @@ export class CartComponent implements OnInit {
     })
   }
 
+  // call services to remove individual product from cart component
   removeItem(item: any){
     this.cartService.removeCartItem(item);
   }
+
+  // call services to remove all product from cart component
   emptycart(){
     this.cartService.removeAllCart();
-    alert("Checkout Successfull!");
   }
 
+  // Create a function for Increase the Quantity of product
   increaseQuantity(item:any,quantity:number){
     for(let i=0;i<this.product.length;i++)
     {
@@ -46,6 +50,7 @@ export class CartComponent implements OnInit {
      this.grandTotal=this.cartService.getTotalPrice();    
     }
 
+    // Create a function for Decrease the Quantity of product
     decreaseQuantity(item:any,quantity:number){
       for(let i=0;i<this.product.length;i++)
       {

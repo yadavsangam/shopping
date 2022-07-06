@@ -18,7 +18,7 @@ body {
     display: flex;
     -ms-flex-wrap: wrap; 
     flex-wrap: wrap;
-    margin: 0 -16px;
+    margin: 0 0px;
   }
   
   .col-25 {
@@ -40,6 +40,7 @@ body {
   .col-50,
   .col-75 {
     padding: 0 16px;
+    margin: 60px 0 ;
   }
   
   .container {

@@ -14,6 +14,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CheckoutComponent } from './component/checkout/checkout.component';
 import { AddProductComponent } from './component/add-product/add-product.component';
 import { DashboardComponent } from './component/dashboard/dashboard.component';
+import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,13 @@ import { DashboardComponent } from './component/dashboard/dashboard.component';
     BrowserAnimationsModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    ToastrModule.forRoot({
+      timeOut:2000,
+      progressAnimation: 'increasing',
+      progressBar:true,
+      positionClass:'toast-bottom-right'
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]

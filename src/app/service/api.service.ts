@@ -11,6 +11,7 @@ export class ApiService {
 
   constructor(private http : HttpClient) { }
 
+  // Add product in the web api
   addProduct(product: IProduct){
     this.http.post<IProduct>("https://localhost:44313/api/products",JSON.stringify(product),{
       headers:{
@@ -20,6 +21,7 @@ export class ApiService {
     }).subscribe(result => console.log("Add Product"));
   }
 
+  // Get product from the Web API
   getProduct(){
     return this.http.get<IProduct>("https://localhost:44313/api/products",{headers: {"Access-Control-Allow-Origin":"*"}})
     .pipe(map((res:IProduct)=>{
@@ -27,6 +29,7 @@ export class ApiService {
     }))
   }
 
+  // Delete Product From the Web API
   deleteProducts(productId:number){
     this.http.delete("https://localhost:44313/api/products/"+productId, {
       headers: {

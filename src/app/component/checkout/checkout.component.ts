@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HostListener } from '@angular/core';
+import { IProduct } from 'src/app/iproduct';
+import {CartService} from '../../service/cart.service';
 
 declare var Razorpay:any;
 
@@ -10,8 +12,16 @@ declare var Razorpay:any;
   styleUrls: ['./checkout.component.css']
 })
 export class CheckoutComponent implements OnInit {
+  public productList : IProduct[] = [];
+  public grandTotal ! : number ; 
+
+  constructor(private cartService: CartService){}
+
   ngOnInit(): void {
-    throw new Error('Method not implemented.');
+    this.cartService.getProducts().subscribe(res=>{
+      this.productList = res;
+      this.grandTotal=this.cartService.getTotalPrice();
+     })
   }
   message:any="Not yet started";
   paymentId="";
@@ -20,7 +30,7 @@ export class CheckoutComponent implements OnInit {
   options = { 
 
     "key": "rzp_test_nsB9QKukBu9R7G",
-    "amount": "200",
+    "amount": this.grandTotal ,
     "name": "shruti chavan",
     "description": "Web Development",
     "image": "https://www.bing.com/th?id=OIP.cnecnqWcPtjpK9zoiO42dwHaHa&w=96&h=100&c=8&rs=1&qlt=90&o=6&dpr=1.5&pid=3.1&rm=2",
@@ -54,7 +64,7 @@ export class CheckoutComponent implements OnInit {
     paynow(){
       this.paymentId = '';
 this.error = '';
-   this.options.amount = "200"; //paise
+   this.options.amount = this.grandTotal *100; //paise
   this.options.prefill.name = "shruti chavan";
  this.options.prefill.email = "chavanshruti208@gmail.com";
 

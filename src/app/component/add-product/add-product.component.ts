@@ -11,6 +11,7 @@ import { IProduct } from '../../iproduct';
 })
 export class AddProductComponent implements OnInit {
 
+  // Initial Form data which is blank string
   product_title: FormControl = new FormControl("");
   product_price: FormControl = new FormControl("");
   product_category: FormControl = new FormControl("");
@@ -22,10 +23,11 @@ export class AddProductComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  
   save(){
     let product:IProduct = {
-      productTitle: this.product_title.value,
-      productPrice: parseInt(this.product_price.value),
+      productTitle: this.product_title.value,  //get the data from input
+      productPrice: parseInt(this.product_price.value), //parseInt is used for converting a string into integer
       productCategory: this.product_category.value,
       productDescription: this.product_description.value,
       productImage: this.product_image.value,
@@ -37,7 +39,7 @@ export class AddProductComponent implements OnInit {
       category: '',
       total: 0
     };
-    this.productService.addProduct(product);
+    this.productService.addProduct(product);  // call add product from services
     alert("Product Added!");
   }
 

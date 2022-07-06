@@ -33,6 +33,12 @@ h6 {
     text-align: center;
 }
 
+.product_card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .card-table {
     top: 12%;
     position: absolute;
@@ -61,4 +67,5 @@ h6 {
 span{
     cursor: pointer;
 }
+
 

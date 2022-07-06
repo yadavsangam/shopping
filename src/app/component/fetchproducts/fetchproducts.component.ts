@@ -24,6 +24,9 @@ export class FetchproductsComponent implements OnInit {
     this.loadData();
   }
 
+// Here we call our products by calling getProduct from services
+// and all of this is passed through a function
+// so thats how we use multuple times of this feature by caliing this function
   loadData(){
     this.api.getProduct()
     .subscribe(res => {
@@ -42,10 +45,12 @@ export class FetchproductsComponent implements OnInit {
   }
 
  
+   // call services to add the product in cart
   addtocart(item: IProduct){
     this.cartService.addtoCart(item);
   }
 
+  // filtering category feature
   filter(category:string){
     this.filterCategory = this.productList
     .filter((a:any)=>{
